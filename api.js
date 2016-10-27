@@ -2,18 +2,8 @@ var express = require('express');
 var app = express();
 var sql = require("mssql");
 var squel=require("squel");
+
 // config for your database
-// var config = {
-//  user: 'sa',
-//  password: '123',
-//  //server: '192.168.1.66\\SQLEXR2014', 
-//  // server: 'skont-dell\\sqlexr2014', 
-//  // database: 'DiaxonDemo Core'
-//  server: 'sk\\sql_2014', 
-//  database: 'Elocoat Prod Core'
- 
-//   };
- 
  var config=(require('./db.json'));
 
 app.get('/parcels', function (req, res) { 
@@ -97,53 +87,6 @@ q.from('outgoingmessage')
  });
 });
 
-// app.get('/p', function (req, res) { 
- 
-//  // connect to your database
-//  sql.connect(config, function (err) {
- 
-//  if (err) console.log(err);
- 
-//  // create Request object
-//  var request = new sql.Request();
- 
-//  // query to the database and get the data
-//  request.query('select id,extid,machinecodecreate,planparcelstatus from parcel', function (err, recordset) {
- 
-//  if (err) console.log(err)
- 
-//  // send data as a response
-//  res.send(recordset);
- 
-//  });
-//  });
-// });
-
-// app.get('/a', function (req, res) { 
- 
-//  // connect to your database
-//  sql.connect(config, function (err) {
- 
-// //var id = req.params.id;
-
-//  if (err) console.log(err);
- 
-//  // create Request object
-//  var request = new sql.Request();
-  
-//  // query to the database and get the data
-//  request.query("select id,extid,machinecodecreate,planparcelstatus from parcel where extid='"+ req.param('extid') +"'", function (err, recordset) {
-//  console.log("select id,extid,machinecodecreate,planparcelstatus from parcel where extid='"+ req.param('extid') +"'");
-
-//  if (err) console.log(err)
- 
-//  // send data as a response
-//  res.send(recordset);
- 
-//  });
-//  });
-// });
- 
 var server = app.listen(4000, function () {
  console.log('Server is running... on Port 4000');
 });
