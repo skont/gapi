@@ -7,7 +7,7 @@
 {
  "user": "sa",
  "password": "123",
- "server": "sk\\sql_2014", 
- "database": "Elocoat Prod Core"
+ "server": "...", 
+ "database": "..."
  }
  ```
