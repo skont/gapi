@@ -1,0 +1,10 @@
+{
+  "name": "GreyconMill_API",
+  "version": "1.0.0",
+  "description": "Access GreyconMill database with nodejs",
+  "dependencies": {
+    "express": "^4.14.0",
+    "mssql": "^3.3.0",
+    "squel" : "*"
+  }
+}
