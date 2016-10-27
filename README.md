@@ -1,6 +1,6 @@
 "GreyconApi test application"
 
--- first run after git pull
+-- first run after git pull --
 * npm install --save
 * create a file named db.json with the following (no comments allowed):
 {
