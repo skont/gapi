@@ -11,3 +11,6 @@
  "database": "..."
  }
  ```
+
+ or use the command:
+ echo '{  "user": "sa",  "password": "123",  "server": "...",  "database": "..."  }' > db.json

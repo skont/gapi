@@ -77,6 +77,7 @@ q.from('outgoingmessage')
  
  // query to the database and get the data
  request.query(q.toString(), function (err, recordset) {
+     console.log(q.toString());
  
  if (err) console.log(err)
  
