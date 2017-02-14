@@ -6,6 +6,11 @@ var squel=require("squel");
 // config for your database
  var config=(require('./db.json'));
 
+ app.get('/', function (req, res) {
+  res.send('<h3>Usage</h3><ul><li>/msg/in</li><li>/msg/out</li><li>/msg/action</li><li>/parcels?machine=...</li><li>/parcels?extid=...</li></ul>')
+})
+
+
 app.get('/parcels', function (req, res) { 
  
  // connect to your database
