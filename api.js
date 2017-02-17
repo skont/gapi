@@ -3,11 +3,17 @@ var app = express();
 var sql = require("mssql");
 var squel=require("squel");
 
+
+//hbs views engine
+app.set('view engine', 'hbs')
+
+
 // config for your database
  var config=(require('./db.json'));
 
  app.get('/', function (req, res) {
-  res.send('<h3>Usage</h3><ul><li>/msg/in</li><li>/msg/out</li><li>/msg/action</li><li>/parcels?machine=...</li><li>/parcels?extid=...</li></ul>')
+ 	res.render('layout', { title: 'Hey', message: '<h3>Usage</h3><ul><li>/msg/in</li><li>/msg/out</li><li>/msg/action</li><li>/parcels?machine=...</li><li>/parcels?extid=...</li></ul>' })
+  //res.send('<h3>Usage</h3><ul><li>/msg/in</li><li>/msg/out</li><li>/msg/action</li><li>/parcels?machine=...</li><li>/parcels?extid=...</li></ul>')
 })
 
 

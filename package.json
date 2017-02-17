@@ -4,7 +4,8 @@
   "description": "Access GreyconMill database with nodejs",
   "dependencies": {
     "express": "^4.14.0",
+    "hbs": "^4.0.1",
     "mssql": "^3.3.0",
-    "squel" : "*"
+    "squel": "*"
   }
 }
