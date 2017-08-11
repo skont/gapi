@@ -14,3 +14,6 @@
 
  or use the command:
  echo '{  "user": "sa",  "password": "123",  "server": "...",  "database": "..."  }' > db.json
+
+ ### Note
+ Make sure that SQL Server browser is running
