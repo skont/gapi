@@ -1,7 +1,9 @@
 var express = require('express');
+var router = express.Router();
 var app = express();
-var sql = require("mssql");
-var squel=require("squel");
+var sql = require('mssql');
+var squel=require('squel');
+var bodyParser=require('Body-Parser');
 
 
 //hbs views engine
@@ -11,10 +13,13 @@ app.set('view engine', 'hbs')
 // config for your database
  var config=(require('./db.json'));
 
- app.get('/', function (req, res) {
- 	res.render('layout', { title: 'Hey', message: '<h3>Usage</h3><ul><li>/msg/in</li><li>/msg/out</li><li>/msg/action</li><li>/parcels?machine=...</li><li>/parcels?extid=...</li></ul>' })
-  //res.send('<h3>Usage</h3><ul><li>/msg/in</li><li>/msg/out</li><li>/msg/action</li><li>/parcels?machine=...</li><li>/parcels?extid=...</li></ul>')
-})
+//  app.get('/', function (req, res) {
+//  	res.render('index', { title: 'Hey', message: '<h3>Usage</h3><ul><li>/msg/in</li><li>/msg/out</li><li>/msg/action</li><li>/parcels?machine=...</li><li>/parcels?extid=...</li></ul>' })
+//   //res.send('<h3>Usage</h3><ul><li>/msg/in</li><li>/msg/out</li><li>/msg/action</li><li>/parcels?machine=...</li><li>/parcels?extid=...</li></ul>')
+// })
+
+var index = require('./routes/index');
+app.use('/', index);
 
 
 app.get('/parcels', function (req, res) { 
