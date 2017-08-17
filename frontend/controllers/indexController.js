@@ -1,6 +1,6 @@
-var myApp = angular.module('spicyApp1', []);
+var ind = angular.module('indApp', []);
 
-myApp.controller('SpicyController', ['$scope', function($scope) {
+ind.controller('indexController', ['$scope', function($scope) {
     $scope.spice = 'very';
 
     $scope.chiliSpicy = function() {

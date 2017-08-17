@@ -1,7 +1,27 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <meta charset="UTF-8">
+  <title>Messages</title>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.6.5/angular-resource.min.js"></script>
+  
+</head>
+
 <body>
 
+<div ng-controller="messagesController" ng-app="msgApp">
+<table>
+	<tr ng-repeat="m in messages">
+	<td>{{m.msgcount}}</td>
+	<td>{{}}</td>
+	<td>{{}}</td>
+	</tr>
+</table>
+</div>
 
+
+<script src="../controllers/messagesController.js"></script>
 </body>
 </html>

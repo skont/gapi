@@ -6,9 +6,10 @@
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
 </head>
+
 <body>
 
-<div ng-controller="SpicyController">
+<div ng-controller="indexController" ng-app="indApp">
  <button ng-click="chiliSpicy()">Chili</button>
  <button ng-click="jalapenoSpicy()">Jalapeño</button>
  <p>The food is {{spice}} spicy!</p>
