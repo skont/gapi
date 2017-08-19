@@ -41,10 +41,10 @@ var ins = squel.insert();
         
         ins.into('INCOMINGMESSAGE')
         .set('ExtSystem', 'GreyconApi')
-        .set('MessageConts',req.body.userName)
+        .set('MessageConts',req.body.conts)
         .set('IssueDate', squel.str('getdate()'))
         .set('MsgStatus', 1)
-        .set('Upuser', 'GreyconApi')
+        .set('Upuser', req.body.userName)
         .set('Uptime', squel.str('getdate()'));
         
 console.log(ins.toString());

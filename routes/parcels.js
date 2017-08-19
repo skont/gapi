@@ -8,7 +8,7 @@ var router = express.Router();
 var config=require('../db.json');
 
 
-router.get('/parcels', function (req, res, next) { 
+router.get('/api/parcels', function (req, res, next) { 
 console.log('Parcels request');
 
 // connect to your database
@@ -44,8 +44,9 @@ request.query(q.toString(), function (err, recordset) {
 	if (err) console.log(err)
 
 // send data as a response
-res.send(recordset);
+res.json(recordset);
 
+next();
 });
 });
 });

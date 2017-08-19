@@ -7,7 +7,7 @@ var router = express.Router();
 
 var config=require('../db.json');
 
-router.get('/msg/:type', function (req, res, next) { 
+router.get('/api/msg/:type', function (req, res, next) { 
 
 console.log('Messages request');
 // connect to your database
@@ -38,7 +38,9 @@ request.query(q.toString(), function (err, recordset) {
 	console.log(q.toString());
 
  	if (err) console.log(err)
- 		res.send(recordset);
+ 		res.json(recordset);
+
+ 	next();
  });
 });
 });
